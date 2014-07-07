@@ -1,0 +1,284 @@
+*** Error log for IntentionallyBadApp: Something went horribly wrong
+Current system time is: 2013/09/17 10:12:25 AM
+Number of failed exit attempts was 3
+
+Time from launch to fatal exception was 5 seconds.
+Survived exception 0 time(s)
+Final random number was: 0.7285777725701865
+
+The logged in user is alison.hawke
+IntentionallyBapApp was running on Windows 7
+Operating system architecture is amd64
+
+Java version is 1.7.0_21
+Java Virtual Machine version is 23.21-b01
+Java Runtime Environment version is 1.7
+Java vendor is Oracle Corporation
+
+java.lang.Exception: Something has gone horribly wrong.
+	at io.fictional.qa.BadApp.randomlyKillTheApp(BadApp.java:174)
+	at io.fictional.qa.BadApp.access$500(BadApp.java:31)
+	at io.fictional.qa.BadApp$5.actionPerformed(BadApp.java:103)
+	at javax.swing.Timer.fireActionPerformed(Timer.java:312)
+	at javax.swing.Timer$DoPostEvent.run(Timer.java:244)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:251)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:727)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:688)
+	at java.awt.EventQueue$3.run(EventQueue.java:686)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:697)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at javax.swing.JOptionPane.showOptionDialog(JOptionPane.java:870)
+	at javax.swing.JOptionPane.showMessageDialog(JOptionPane.java:667)
+	at javax.swing.JOptionPane.showMessageDialog(JOptionPane.java:638)
+	at io.fictional.qa.BadApp.youClickedTheForbiddenMenu(BadApp.java:132)
+	at io.fictional.qa.BadApp.access$300(BadApp.java:31)
+	at io.fictional.qa.BadApp$4.actionPerformed(BadApp.java:93)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.Component.processMouseEvent(Component.java:6505)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6270)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4861)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:729)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:688)
+	at java.awt.EventQueue$3.run(EventQueue.java:686)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:702)
+	at java.awt.EventQueue$4.run(EventQueue.java:700)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:699)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+*** Error log for IntentionallyBadApp: Something went horribly wrong
+Current system time is: 2013/09/17 14:08:33 PM
+Number of failed exit attempts was 0
+
+Time from launch to fatal exception was 5 seconds.
+Survived exception 0 time(s)
+Final random number was: 0.9103750732961747
+
+The logged in user is alison.hawke
+IntentionallyBapApp was running on Windows 7
+Operating system architecture is amd64
+
+Java version is 1.7.0_21
+Java Virtual Machine version is 23.21-b01
+Java Runtime Environment version is 1.7
+Java vendor is Oracle Corporation
+
+java.lang.Exception: Something has gone horribly wrong.
+	at io.fictional.qa.BadApp.SeeIfAppWillClose(BadApp.java:166)
+	at io.fictional.qa.BadApp.access$300(BadApp.java:31)
+	at io.fictional.qa.BadApp$3.actionPerformed(BadApp.java:84)
+	at javax.swing.Timer.fireActionPerformed(Timer.java:312)
+	at javax.swing.Timer$DoPostEvent.run(Timer.java:244)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:251)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:727)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:688)
+	at java.awt.EventQueue$3.run(EventQueue.java:686)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:697)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+-------------------------------------------------------
+*** Error log for IntentionallyBadApp: Something went horribly wrong
+Current system time is: 2013/09/17 14:10:51 PM
+Number of failed exit attempts was 4
+
+Time from launch to fatal exception was 25 seconds.
+Survived exception 4 time(s)
+Final random number was: 0.7381525234984223
+
+The logged in user is alison.hawke
+IntentionallyBapApp was running on Windows 7
+Operating system architecture is amd64
+
+Java version is 1.7.0_21
+Java Virtual Machine version is 23.21-b01
+Java Runtime Environment version is 1.7
+Java vendor is Oracle Corporation
+
+java.lang.Exception: Something has gone horribly wrong.
+	at io.fictional.qa.BadApp.SeeIfAppWillClose(BadApp.java:166)
+	at io.fictional.qa.BadApp.access$300(BadApp.java:31)
+	at io.fictional.qa.BadApp$3.actionPerformed(BadApp.java:84)
+	at javax.swing.Timer.fireActionPerformed(Timer.java:312)
+	at javax.swing.Timer$DoPostEvent.run(Timer.java:244)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:251)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:727)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:688)
+	at java.awt.EventQueue$3.run(EventQueue.java:686)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:697)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+-------------------------------------------------------
+*** Error log for IntentionallyBadApp: Something went horribly wrong
+Current system time is: 2013/09/17 14:12:13 PM
+Number of failed exit attempts was 4
+
+Time from launch to fatal exception was 30 seconds.
+Survived exception 5 time(s)
+Final random number was: 0.7169126735828472
+
+The logged in user is alison.hawke
+IntentionallyBapApp was running on Windows 7
+Operating system architecture is amd64
+
+Java version is 1.7.0_21
+Java Virtual Machine version is 23.21-b01
+Java Runtime Environment version is 1.7
+Java vendor is Oracle Corporation
+
+java.lang.Exception: Something has gone horribly wrong.
+	at io.fictional.qa.BadApp.SeeIfAppWillClose(BadApp.java:166)
+	at io.fictional.qa.BadApp.access$300(BadApp.java:31)
+	at io.fictional.qa.BadApp$3.actionPerformed(BadApp.java:84)
+	at javax.swing.Timer.fireActionPerformed(Timer.java:312)
+	at javax.swing.Timer$DoPostEvent.run(Timer.java:244)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:251)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:727)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:688)
+	at java.awt.EventQueue$3.run(EventQueue.java:686)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:697)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:154)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:182)
+	at java.awt.WaitDispatchSupport$4.run(WaitDispatchSupport.java:221)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.WaitDispatchSupport.enter(WaitDispatchSupport.java:219)
+	at java.awt.Dialog.show(Dialog.java:1082)
+	at javax.swing.JOptionPane.showOptionDialog(JOptionPane.java:870)
+	at javax.swing.JOptionPane.showMessageDialog(JOptionPane.java:667)
+	at javax.swing.JOptionPane.showMessageDialog(JOptionPane.java:638)
+	at io.fictional.qa.BadApp.youClickedTheForbiddenMenu(BadApp.java:135)
+	at io.fictional.qa.BadApp.access$600(BadApp.java:31)
+	at io.fictional.qa.BadApp$5.actionPerformed(BadApp.java:118)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2018)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2341)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.Component.processMouseEvent(Component.java:6505)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3321)
+	at java.awt.Component.processEvent(Component.java:6270)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Component.dispatchEventImpl(Component.java:4861)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4832)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4492)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4422)
+	at java.awt.Container.dispatchEventImpl(Container.java:2273)
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+	at java.awt.Component.dispatchEvent(Component.java:4687)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:729)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:688)
+	at java.awt.EventQueue$3.run(EventQueue.java:686)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.awt.EventQueue$4.run(EventQueue.java:702)
+	at java.awt.EventQueue$4.run(EventQueue.java:700)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:699)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+------------------------------------------------------- 
+
+*** Error log for IntentionallyBadApp: Something went horribly wrong
+Current system time is: 2013/09/17 14:12:31 PM
+Number of failed exit attempts was 0
+
+Time from launch to fatal exception was 5 seconds.
+Survived exception 0 time(s)
+Final random number was: 0.7041226644097437
+
+The logged in user is alison.hawke
+IntentionallyBapApp was running on Windows 7
+Operating system architecture is amd64
+
+Java version is 1.7.0_21
+Java Virtual Machine version is 23.21-b01
+Java Runtime Environment version is 1.7
+Java vendor is Oracle Corporation
+
+java.lang.Exception: Something has gone horribly wrong.
+	at io.fictional.qa.BadApp.SeeIfAppWillClose(BadApp.java:166)
+	at io.fictional.qa.BadApp.access$300(BadApp.java:31)
+	at io.fictional.qa.BadApp$3.actionPerformed(BadApp.java:84)
+	at javax.swing.Timer.fireActionPerformed(Timer.java:312)
+	at javax.swing.Timer$DoPostEvent.run(Timer.java:244)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:251)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:727)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:688)
+	at java.awt.EventQueue$3.run(EventQueue.java:686)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:697)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+------------------------------------------------------- 
+

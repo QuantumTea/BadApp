@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="IntentionallyBadApp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/IntentionallyBadApp_jar</output-path>
+    <root id="archive" name="IntentionallyBadApp.jar">
+      <element id="module-output" name="IntentionallyBadApp" />
+    </root>
+  </artifact>
+</component>

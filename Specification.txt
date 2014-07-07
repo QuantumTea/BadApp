@@ -1,0 +1,8 @@
+Spec for the Bad App
+
+This is an app to display a message box. 
+The user can launch the message box multiple times, it should dismiss when you click the OK button with no other action.
+The user should be able to close the app using either the red X button at the top right of the app, or the exit button at the bottom.
+The app must stay running all day without failing.
+
+
