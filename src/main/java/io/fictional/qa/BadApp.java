@@ -28,23 +28,25 @@ import java.util.Date;
 
 import static javax.swing.JOptionPane.showMessageDialog;
 
-public class BadApp extends JFrame {
-
+public class BadApp extends JFrame
+{
     private static int failedCloseAttemptsCounter = 0;
     private static JLabel failedCloseAttemptsLabel;
     private static int timeToFatalException = 0;
     private static int survivedExceptionAttempts = 0;
     private static double finalRandomNumber = 0;
+    private static String lineSeparator = System.getProperty("line.separator");
 
     public BadApp() {
-        super("Welcome to the IntentionallyBadApp");
+        super("Welcome to the BadApp");
         ConstructContentPane();
         GenerateMenuBar();
         SetUpTimerToGenerateExceptions();
     }
 
     public static void main(String[] args) {
-        BadApp app = new BadApp();
+        BadApp app;
+        app = new BadApp();
         app.setVisible(true);
     }
 
@@ -97,7 +99,7 @@ public class BadApp extends JFrame {
         JMenu forbiddenMenu = new JMenu("Do not click this menu");
         menuBar.add(forbiddenMenu);
 
-        JMenuItem aboutAction = new JMenuItem("About the IntentionallyBadApp");
+        JMenuItem aboutAction = new JMenuItem("About the BadApp");
         helpMenu.add(aboutAction);
         aboutAction.addActionListener(new ActionListener() {
             @Override
@@ -117,12 +119,12 @@ public class BadApp extends JFrame {
     }
 
     private void launchMisspelledMessagePopup() {
-        showMessageDialog(this, "Yu launchd a messsge window, wel done.", "Alart!", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showInputDialog(this, "Yu launchd a messsge window, wel done.", "Alart!", JOptionPane.QUESTION_MESSAGE);
     }
 
     private void displayAboutBox() {
-        showMessageDialog(this, "IntentionallyBadApp was written by Alison Hawke",
-                "About the IntentionallyBadApp", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showConfirmDialog(this, "LessBadApp was written by Alison Hawke",
+                "About the LessBadApp", JOptionPane.YES_NO_CANCEL_OPTION);
     }
 
     private void youClickedTheForbiddenMenu() {
@@ -134,7 +136,7 @@ public class BadApp extends JFrame {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss a");
         String pathToDesktop = System.getProperty("user.home")
                 + System.getProperty("file.separator") + "Desktop"
-                + System.getProperty("file.separator") + "IntentionallyBadApp error log.txt";
+                + System.getProperty("file.separator") + "BadApp error log.txt";
 
         try {
             // true to append, false to write a new file
@@ -189,7 +191,7 @@ public class BadApp extends JFrame {
         return false;
     }
 
-    public double GetRandomNumber() {
+    double GetRandomNumber() {
         // Returns a number between 0.0 and 0.1
         return Math.random();
     }
@@ -209,7 +211,8 @@ public class BadApp extends JFrame {
 
     private void MakeTheWindowWider() {
         int newWidth = this.getWidth() + 50;
-        this.setSize(newWidth, 300);
+        int oldHeight = this.getHeight();
+        this.setSize(newWidth, oldHeight);
         failedCloseAttemptsLabel.setText("    Failed attempts to close this window: " + failedCloseAttemptsCounter);
     }
 
@@ -232,25 +235,26 @@ public class BadApp extends JFrame {
     }
 
     private void writeSystemInformation(DateFormat dateFormat, PrintWriter p) {
-        p.println("*** Error log for IntentionallyBadApp: " + "Something went horribly wrong");
+        p.println("*** Errror log for IntentionallyBadApp: " + "Something went horribly wrong");
+        // intentional spelling error, even in the stack trace
         p.println("Current system time is: " + dateFormat.format(new Date()));
         p.println("Number of failed exit attempts was " + failedCloseAttemptsCounter
-                + System.getProperty("line.separator"));
+                + lineSeparator);
 
         p.println("Time from launch to fatal exception was " + timeToFatalException + " seconds.");
         p.println("Survived exception " + survivedExceptionAttempts + " time(s)");
         p.println("Final random number was: " + finalRandomNumber
-                + System.getProperty("line.separator"));
+                + lineSeparator);
 
         p.println("The logged in user is " + System.getProperty("user.name"));
-        p.println("IntentionallyBapApp was running on " + System.getProperty("os.name"));
+        p.println("IntentionallyBadApp was running on " + System.getProperty("os.name"));
         p.println("Operating system architecture is " + System.getProperty("os.arch")
-                + System.getProperty("line.separator"));
+                + lineSeparator);
 
         p.println("Java version is " + System.getProperty("java.version"));
         p.println("Java Virtual Machine version is " + System.getProperty("java.vm.version"));
         p.println("Java Runtime Environment version is " + System.getProperty("java.specification.version"));
         p.println("Java vendor is " + System.getProperty("java.vendor")
-                + System.getProperty("line.separator"));
+                + lineSeparator);
     }
 }
