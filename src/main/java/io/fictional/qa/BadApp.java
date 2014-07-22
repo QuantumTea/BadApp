@@ -227,6 +227,7 @@ public class BadApp extends JFrame
             // true to append, false to write a new file
             PrintWriter p = new PrintWriter(new BufferedWriter(new FileWriter(pathToDesktop, true)));
             writeSystemInformation(dateFormat, p);
+            p.println("------------------------------------------------------- \n");
             p.close();
         } catch (IOException ioe) {
             System.out.println("IOException, log file not written");
