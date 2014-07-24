@@ -3,9 +3,7 @@ package io.fictional.qa;
 /**
  * Created with IntelliJ IDEA.
  * User: Alison Hawke
- * Date: 4/3/13
- * Time: 8:10 AM
- *
+ * 
  * Description: This is an intentionally buggy program for QA training in exploratory testing.
  * The Close button (top right red X or circle) doesn't work
  * App closes randomly, leaving log file with a stack trace on the desktop
@@ -35,7 +33,12 @@ public class BadApp extends JFrame
     private static int timeToFatalException = 0;
     private static int survivedExceptionAttempts = 0;
     private static double finalRandomNumber = 0;
-    private static String lineSeparator = System.getProperty("line.separator");
+    private static String systemLineSeparator = System.getProperty("line.separator");
+    private PrintWriter printWriter;
+    private final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss a");
+    private final String pathToDesktop = System.getProperty("user.home")
+            + System.getProperty("file.separator") + "Desktop"
+            + System.getProperty("file.separator") + "LessBadApp error log.txt";
 
     public BadApp() {
         super("Welcome to the BadApp");
@@ -119,12 +122,12 @@ public class BadApp extends JFrame
     }
 
     private void launchMisspelledMessagePopup() {
-        JOptionPane.showInputDialog(this, "Yu launchd a messsge window, wel done.", "Alart!", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Yu launchd a messsge window, wel done.", "Alart!", JOptionPane.QUESTION_MESSAGE);
     }
 
     private void displayAboutBox() {
-        JOptionPane.showConfirmDialog(this, "LessBadApp was written by Alison Hawke",
-                "About the LessBadApp", JOptionPane.YES_NO_CANCEL_OPTION);
+        JOptionPane.showMessageDialog(this, "LessBadApp was written by Alison Hawke",
+                "About the LessBadApp", JOptionPane.ERROR_MESSAGE);
     }
 
     private void youClickedTheForbiddenMenu() {
@@ -133,24 +136,7 @@ public class BadApp extends JFrame
     }
 
     private void dealWithException(Exception exception) {
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss a");
-        String pathToDesktop = System.getProperty("user.home")
-                + System.getProperty("file.separator") + "Desktop"
-                + System.getProperty("file.separator") + "BadApp error log.txt";
-
-        try {
-            // true to append, false to write a new file
-            PrintWriter printWriter = new PrintWriter(new BufferedWriter(new FileWriter(pathToDesktop, true)));
-            writeSystemInformation(dateFormat, printWriter);
-            exception.printStackTrace(printWriter);
-            printWriter.println("------------------------------------------------------- \n");
-            printWriter.close();
-        } catch (IOException ioException) {
-            System.out.println("IOException, log file not written");
-            ioException.printStackTrace();
-            exception.printStackTrace();
-        }
-
+        writeErrorLog(exception);
         System.exit(0);
     }
 
@@ -177,14 +163,14 @@ public class BadApp extends JFrame
     private void IncrementCounterToLimitOf20() {
         failedCloseAttemptsCounter++;
         if (failedCloseAttemptsCounter == 20) {
-            writeErrorLog();
+            writeErrorLog("Nothing to see here");
             System.exit(0);
         }
     }
 
     private boolean Fail70PercentOfTime() {
         if (GetRandomNumber() < 0.03) {
-            writeErrorLog();
+            writeErrorLog("Exit button worked");
             System.exit(0);
             return true;
         }
@@ -216,46 +202,60 @@ public class BadApp extends JFrame
         failedCloseAttemptsLabel.setText("    Failed attempts to close this window: " + failedCloseAttemptsCounter);
     }
 
-    private void writeErrorLog() {
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss a");
-        String pathToDesktop = System.getProperty("user.home")
-                + System.getProperty("file.separator")
-                + "Desktop" + System.getProperty("file.separator")
-                + "IntentionallyBadApp error log.txt";
-
-        try {
+    private void writeErrorLog(String message)
+    {
+        try
+        {
             // true to append, false to write a new file
-            PrintWriter p = new PrintWriter(new BufferedWriter(new FileWriter(pathToDesktop, true)));
-            writeSystemInformation(dateFormat, p);
-            p.println("------------------------------------------------------- \n");
-            p.close();
-        } catch (IOException ioe) {
+            printWriter = new PrintWriter(new BufferedWriter(new FileWriter(pathToDesktop, true)));
+            writeSystemInformation(dateFormat, printWriter, message);
+            printWriter.println("-------------------------------------------------------");
+            printWriter.close();
+        } catch (IOException ioe)
+        {
             System.out.println("IOException, log file not written");
             ioe.printStackTrace();
         }
     }
 
-    private void writeSystemInformation(DateFormat dateFormat, PrintWriter p) {
+    private void writeErrorLog(Exception exception)
+    {
+        try
+        {
+            printWriter = new PrintWriter(new BufferedWriter(new FileWriter(pathToDesktop, true)));
+            writeSystemInformation(dateFormat, printWriter, "*the exceptional sound of crickets chirping*");
+            exception.printStackTrace(printWriter);
+            printWriter.println("-------------------------------------------------------");
+            printWriter.close();
+        } catch (IOException ioe)
+        {
+            System.out.println("IOException, log file not written");
+            ioe.printStackTrace();
+        }
+    }
+
+    private void writeSystemInformation(DateFormat dateFormat, PrintWriter p, String message) {
         p.println("*** Errror log for IntentionallyBadApp: " + "Something went horribly wrong");
         // intentional spelling error, even in the stack trace
         p.println("Current system time is: " + dateFormat.format(new Date()));
         p.println("Number of failed exit attempts was " + failedCloseAttemptsCounter
-                + lineSeparator);
+                + systemLineSeparator);
+        p.println("Additional system message: " + message + systemLineSeparator);
 
         p.println("Time from launch to fatal exception was " + timeToFatalException + " seconds.");
         p.println("Survived exception " + survivedExceptionAttempts + " time(s)");
         p.println("Final random number was: " + finalRandomNumber
-                + lineSeparator);
+                + systemLineSeparator);
 
         p.println("The logged in user is " + System.getProperty("user.name"));
         p.println("IntentionallyBadApp was running on " + System.getProperty("os.name"));
         p.println("Operating system architecture is " + System.getProperty("os.arch")
-                + lineSeparator);
+                + systemLineSeparator);
 
         p.println("Java version is " + System.getProperty("java.version"));
         p.println("Java Virtual Machine version is " + System.getProperty("java.vm.version"));
         p.println("Java Runtime Environment version is " + System.getProperty("java.specification.version"));
         p.println("Java vendor is " + System.getProperty("java.vendor")
-                + lineSeparator);
+                + systemLineSeparator);
     }
 }
