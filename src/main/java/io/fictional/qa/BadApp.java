@@ -1,6 +1,6 @@
 package io.fictional.qa;
 
-/**
+/*
  * Created with IntelliJ IDEA.
  * User: Alison Hawke
  * 
@@ -177,7 +177,7 @@ public class BadApp extends JFrame
         return false;
     }
 
-    double GetRandomNumber() {
+    private double GetRandomNumber() {
         // Returns a number between 0.0 and 0.1
         return Math.random();
     }
