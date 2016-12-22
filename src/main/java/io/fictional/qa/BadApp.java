@@ -248,7 +248,7 @@ public class BadApp extends JFrame
                 + systemLineSeparator);
 
         p.println("The logged in user is " + System.getProperty("user.name"));
-        p.println("IntentionallyBadApp was running on " + System.getProperty("os.name"));
+        p.println("BadApp was running on " + System.getProperty("os.name"));
         p.println("Operating system architecture is " + System.getProperty("os.arch")
                 + systemLineSeparator);
 
