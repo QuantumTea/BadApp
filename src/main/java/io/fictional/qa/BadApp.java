@@ -38,7 +38,7 @@ public class BadApp extends JFrame
     private final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss a");
     private final String pathToDesktop = System.getProperty("user.home")
             + System.getProperty("file.separator") + "Desktop"
-            + System.getProperty("file.separator") + "LessBadApp error log.txt";
+            + System.getProperty("file.separator") + "BadApp error log.txt";
 
     public BadApp() {
         super("Welcome to the BadApp");
@@ -126,8 +126,8 @@ public class BadApp extends JFrame
     }
 
     private void displayAboutBox() {
-        JOptionPane.showMessageDialog(this, "LessBadApp was written by Alison Hawke",
-                "About the LessBadApp", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, "BadApp was written by Alison Hawke",
+                "About the BadApp", JOptionPane.ERROR_MESSAGE);
     }
 
     private void youClickedTheForbiddenMenu() {
@@ -235,7 +235,7 @@ public class BadApp extends JFrame
     }
 
     private void writeSystemInformation(DateFormat dateFormat, PrintWriter p, String message) {
-        p.println("*** Errror log for IntentionallyBadApp: " + "Something went horribly wrong");
+        p.println("*** Errror log for BadApp: " + "Something went horribly wrong");
         // intentional spelling error, even in the stack trace
         p.println("Current system time is: " + dateFormat.format(new Date()));
         p.println("Number of failed exit attempts was " + failedCloseAttemptsCounter
