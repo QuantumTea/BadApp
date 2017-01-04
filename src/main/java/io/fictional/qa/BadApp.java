@@ -122,7 +122,7 @@ public class BadApp extends JFrame
     }
 
     private void launchMisspelledMessagePopup() {
-        JOptionPane.showMessageDialog(this, "Yu launchd a messsge window, wel done.", "Alart!", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Yu launchd ã messsge window, wel done.", "Alart!", JOptionPane.QUESTION_MESSAGE);
     }
 
     private void displayAboutBox() {
